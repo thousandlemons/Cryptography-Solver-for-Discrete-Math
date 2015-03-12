@@ -15,7 +15,7 @@ Each ```Encoding``` object is a bi-map between ```Integer``` and ```Character```
 
 ```Encoding.DEFAULT``` is the default case-insensitive scheme used in most textbooks.
 ```
-|char |int |
+|char | int|
 |-----|----|
 |a/A  |   0|
 |b/B  |   1|
