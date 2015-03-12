@@ -1,5 +1,6 @@
 package demo;
 
+import java.util.Arrays;
 import java.util.Map;
 
 import crypto.Crypto;
@@ -36,10 +37,6 @@ public class CryptoDemo {
 		}
 	}
 	
-	public static void main(String[] args) {
-		oneTimePad();
-	}
-	
 	public static void rsa(){
 		Crypto rsa = CryptoFactory.rsa(7, 13, 5);
 		System.out.println(Encoding.ASCII.encrypt("apple", rsa));
@@ -60,6 +57,12 @@ public class CryptoDemo {
 	
 	public static final Encoding ecd = Encoding.DEFAULT;
 	
+	public static void main(String[] args) {
+		Crypto caesar = CryptoFactory.caesar(5, 26); //key and divisor respectively
+		String cipher = Encoding.DEFAULT.encrypt("programmingisfun", caesar);
+		System.out.println(cipher);
+	}
+
 	private CryptoDemo(){
 		
 	}
