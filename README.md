@@ -12,6 +12,13 @@ This is an extensible Java API to encrypt/decrypt strings by using simple cipher
   <li>RSA</li>
 </ul>
 
+There is also a `DiscreteMath` class backing all the necessary calculations, including
+* Euclidean algorithm
+* Extended Euclidean algorithm
+* Greatest common divisor
+* Modular exponentiation
+* Modular inverse
+
 ##User Guide
 ###Encoding
 Each ```Encoding``` object is a bi-map between ```Integer``` and ```Character```. There are two built-in encoding schemes.
