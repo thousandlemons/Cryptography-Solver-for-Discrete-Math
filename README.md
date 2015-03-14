@@ -37,10 +37,6 @@ Then the content in the ```result``` will be
 ```[15, 17, 14, 6, 17, 0, 12, 12, 8, 13, 6, 8, 18, 5, 20, 13]```
 
 ###Crypto
-The ```Crypto``` interface requires its implementation to provide two methods: 
-* ```int[] decrypt(int[] y)```
-* ```int[] encrypt(int[] x)``` 
-
 The built-int ```Crypto``` objects can be accessed from the static factory class ```CryptoFactory```. 
 
 For example, to get one for the Affine cipher, which has a pair of keys `3` and `5`, and a divisor `26`, simple write
@@ -66,6 +62,20 @@ Crypto caesar = CryptoFactory.caesar(5, 26); //key and divisor respectively
 String cipher = Encoding.DEFAULT.encrypt("programmingisfun", caesar);
 ```
 The result string ```cipher``` should have a content of ```"uwtlwfrrnslnxkzs"```.
+
+###Define your own encoding scheme
+There are two constructors in the `Encoding` class:
+* `public Encoding(Map<Character, Integer> mapping)`
+* `public Encoding(Map<Character, Integer> mapping, boolean ignoreCase)`
+
+If you already have a `Map<Character, Integer>`, you can use either of the constructors to create a new `Encoding` object.
+
+###Define your own crypto scheme
+The ```Crypto``` interface requires its implementation to provide two methods: 
+* ```int[] decrypt(int[] y)```
+* ```int[] encrypt(int[] x)``` 
+
+So, simply write your own class that `implements` this interface, and do define these two methods. You may ask for more data (e.g. key, divisor) in the constructor.
 
 ##More Resources
 Please read the javadoc for more detailed information.
