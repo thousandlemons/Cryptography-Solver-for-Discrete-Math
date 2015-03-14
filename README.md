@@ -37,7 +37,11 @@ Then the content in the ```result``` will be
 ```[15, 17, 14, 6, 17, 0, 12, 12, 8, 13, 6, 8, 18, 5, 20, 13]```
 
 ###Crypto
-The ```Crypto``` interface requires its implementation to have a ```int[] decrypt(int[] y)``` and a ```int[] encrypt(int[] x)``` method. The built-int ```Crypto``` objects can be accessed from the static factory class ```CryptoFactory```. 
+The ```Crypto``` interface requires its implementation to provide two methods: 
+* ```int[] decrypt(int[] y)```
+* ```int[] encrypt(int[] x)``` 
+
+The built-int ```Crypto``` objects can be accessed from the static factory class ```CryptoFactory```. 
 
 For example, to get one for the Affine cipher, which has a pair of keys `3` and `5`, and a divisor `26`, simple write
 
