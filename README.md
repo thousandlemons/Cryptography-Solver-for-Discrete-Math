@@ -1,6 +1,6 @@
 # Cryptography Solver for Discrete Math
 
-###*This library is also implemented on TI-84, the graphing calculator.<br>Please contact me if you need a copy of it.*
+###*This library is also implemented on TI-84, the graphing calculator. Please contact me if you need a copy of it.*
 
 ##Introduction
 This is an extensible Java API to encrypt/decrypt strings by using simple ciphers introduced in the Discrete Math module, including:
